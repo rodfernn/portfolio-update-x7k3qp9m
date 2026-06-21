@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Augusta Labs ¬∑ Hg Portfolio Engagement Update, June 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  b,strong{font-weight:600}
+  :root{
+    --bg:#060608; --paper:#0f0f12; --panel:#17171b; --panel-2:#1c1c21;
+    --ink:#f4f3f0; --ink-soft:#c4c4cb; --muted:#84848d; --faint:#56565e;
+    --line:#222227; --line-strong:#31313a;
+    --accent:#aab2ff; --accent-soft:rgba(120,131,255,.15);
+    --up:#65d597; --up-soft:rgba(101,213,151,.13);
+    --hold:#e3b765; --hold-soft:rgba(227,183,101,.14);
+    --down:#ec8b82; --down-soft:rgba(236,139,130,.14);
+    --teal:#5fd0c5; --teal-soft:rgba(95,208,197,.13);
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6;font-size:15px;padding:32px 22px 80px;
+    background-image:radial-gradient(900px 520px at 50% -8%,rgba(120,131,255,.07),transparent 70%);}
+  .sheet{max-width:1760px;margin:0 auto;background:var(--paper);border:1px solid var(--line);overflow:hidden;border-radius:4px;box-shadow:0 24px 70px -28px rgba(0,0,0,.7)}
+  .pad{padding:0 64px}
+  .reveal{opacity:0;transform:translateY(10px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+
+  /* masthead */
+  header{padding:28px 64px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .wordmark{display:flex;align-items:center;gap:11px}
+  .glyph{width:24px;height:24px;border-radius:6px;background:var(--ink);display:flex;align-items:center;justify-content:center;color:#0a0a0b;font-family:var(--sans);font-size:14px;line-height:1;font-weight:700;letter-spacing:-.03em}
+  .wordmark b{font-weight:600;font-size:15px;letter-spacing:-.02em;color:var(--ink)}
+  .conf{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+
+  /* hero */
+  .hero{padding:54px 64px 46px;border-bottom:1px solid var(--line)}
+  .hero .eye{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
+  .hero h1{font-size:38px;line-height:1.06;letter-spacing:-.03em;font-weight:600;max-width:15ch;color:#fff}
+  .hero p{margin-top:18px;font-size:15.5px;color:var(--ink-soft);max-width:62ch;line-height:1.65}
+  .metabar{display:flex;flex-wrap:wrap;gap:32px 40px;margin-top:34px}
+  .metabar div{display:flex;flex-direction:column;gap:5px}
+  .metabar span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+  .metabar b{font-size:13.5px;color:var(--ink);font-weight:500}
+
+  /* sections */
+  section{padding:44px 0}
+  .eyebrow{display:flex;align-items:baseline;gap:12px;margin-bottom:26px}
+  .eyebrow .idx{font-family:var(--mono);font-size:11px;color:var(--accent);font-weight:500}
+  .eyebrow .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500}
+  .eyebrow .rule{flex:1;height:1px;background:var(--line);align-self:center}
+
+  /* snapshot */
+  .snap{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+  .metric{background:var(--paper);padding:22px 22px 24px}
+  .metric .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+  .metric .v{font-size:29px;font-weight:600;color:#fff;letter-spacing:-.03em;line-height:1}
+  .metric .cap{font-size:12px;color:var(--muted);margin-top:13px;line-height:1.45}
+
+  .keypoints{display:flex;flex-direction:column;margin-top:30px}
+  .kp{display:flex;flex-direction:column;gap:9px;padding:16px 0;border-top:1px solid var(--line)}
+  .kp:first-child{border-top:none;padding-top:0}
+  .kp:last-child{padding-bottom:0}
+  .kcat{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--ink)}
+  .kcat::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:7px;vertical-align:middle;background:var(--ink)}
+  .kcat.mom::before{background:var(--up)} .kcat.risk::before{background:var(--down)} .kcat.dec::before{background:var(--accent)} .kcat.ask::before{background:var(--hold)}
+  .kt{font-size:14px;color:var(--ink-soft);line-height:1.6}
+  .kt b{color:var(--ink);font-weight:600}
+  .kt i{font-style:italic;color:var(--ink-soft)}
+
+  /* hg overview fields */
+  .fwk{margin-top:28px;display:flex;flex-direction:column}
+  .fwk .field{display:grid;grid-template-columns:108px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .fwk .field:last-child{border-bottom:none;padding-bottom:0}
+  .flabel{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);padding-top:3px}
+  .fbody{font-size:13px;color:var(--ink-soft);line-height:1.6}
+  .fbody b{color:var(--ink);font-weight:600}
+
+  /* MSA overarching frame */
+  .msaframe{margin-top:30px}
+  .msaframe details.deal{border-left:2px solid var(--accent)}
+  .msalead{font-size:13.5px;color:var(--ink-soft);line-height:1.65;margin-top:26px;max-width:96ch}
+
+  /* brand logos */
+  .wordmark img.logo-aug{height:23px;width:auto;display:block}
+  .mast-right{display:flex;align-items:center;gap:18px}
+  .cobrand{display:flex;align-items:center;gap:10px}
+  .cb-for{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+  .mast-right img.logo-hg{height:22px;width:auto;display:block;opacity:.95}
+  .logo-aug-ft{height:30px;width:auto;vertical-align:middle;opacity:.95}
+  .logo-hg-ft{height:34px;width:auto;vertical-align:middle;opacity:.95}
+  @media (max-width:660px){ .mast-right{gap:12px} .cb-for{display:none} }
+
+  /* highlights for Hg */
+  .hilites{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+  .hl{background:var(--paper);padding:20px 20px 22px;display:flex;flex-direction:column;gap:9px;border-top:2px solid var(--accent)}
+  .hl .hn{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:500}
+  .hl .ht{font-size:14.5px;font-weight:600;color:#fff;letter-spacing:-.02em;line-height:1.25}
+  .hl .hb{font-size:12.5px;color:var(--ink-soft);line-height:1.55}
+  .hl .hb b{color:var(--ink);font-weight:600}
+
+  /* active vs in-conversation group headers */
+  .subhead{display:flex;align-items:baseline;gap:11px;margin:4px 0 16px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+  .subhead .cnt{font-size:10px;color:var(--accent);background:var(--accent-soft);border-radius:20px;padding:2px 9px;letter-spacing:.05em}
+  .subhead .shrule{flex:1;height:1px;background:var(--line);align-self:center}
+  .subhead.conv{color:var(--muted);margin-top:34px}
+  .subhead.conv .cnt{color:var(--teal);background:var(--teal-soft)}
+
+  /* engagements-over-time chart */
+  .chartwrap{margin-top:30px;border:1px solid var(--line);background:var(--paper);border-radius:4px;padding:20px 24px 14px}
+  .chartwrap .chead{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:4px}
+  .chartwrap .ct{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .chartwrap .cc{font-size:11.5px;color:var(--muted);line-height:1.5}
+  .chartwrap svg{display:block;width:100%;height:auto;margin-top:8px}
+  .chartwrap .axislbl{font-family:var(--mono);font-size:10px;fill:var(--faint)}
+  .chartwrap .vlbl{font-family:var(--mono);font-size:11px;fill:var(--ink);font-weight:500}
+  .chartwrap .xlbl{font-family:var(--mono);font-size:10.5px;fill:var(--muted)}
+
+  /* MSA - overarching frame, visually distinct from PortCos */
+  .msa{position:relative;border:1px solid var(--line-strong);border-radius:6px;overflow:hidden;background:linear-gradient(180deg,rgba(120,131,255,.12),rgba(120,131,255,.03) 42%,var(--panel) 100%);padding:30px 34px 26px;margin-top:26px}
+  .msa::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent)}
+  .msa-eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:12px}
+  .msa-title{font-size:25px;font-weight:600;color:#fff;letter-spacing:-.03em;line-height:1.12;max-width:26ch}
+  .msa-terms{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .msa-terms span{font-family:var(--mono);font-size:11px;color:var(--ink);background:rgba(120,131,255,.12);border:1px solid var(--accent-soft);border-radius:4px;padding:7px 11px}
+  .msa-body{margin-top:24px;display:grid;grid-template-columns:1.5fr 1fr;gap:30px}
+  .msa-status{font-size:14px;color:var(--ink-soft);line-height:1.65}
+  .msa-meta{display:flex;flex-direction:column;gap:16px}
+  .msa-meta>div{display:flex;flex-direction:column;gap:5px}
+  .msa-meta span{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+  .msa-meta b{font-size:13px;color:var(--ink);font-weight:500;line-height:1.5}
+  .msa-path{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.7}
+  .msa-path span{color:var(--accent);letter-spacing:.1em;text-transform:uppercase;font-size:9.5px;margin-right:8px}
+  @media(max-width:760px){.msa-body{grid-template-columns:1fr;gap:18px}}
+
+  /* engagement tiles */
+  .deals{display:flex;flex-direction:column;gap:16px}
+  /* node map */
+  .nodemap{margin-top:24px;border:1px solid var(--line);background:var(--paper);border-radius:6px;padding:22px 24px}
+  .nmbranch{margin-left:9px;padding-left:22px;border-left:1px solid var(--line-strong);display:flex;flex-direction:column;gap:14px;margin-top:14px}
+  .nmrow{display:flex;align-items:center;gap:9px;flex-wrap:wrap;position:relative}
+  .nmrow::before{content:"";position:absolute;left:-22px;top:50%;width:16px;height:1px;background:var(--line-strong)}
+  .nmlbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-right:4px}
+  .nmlbl.conv{color:var(--teal)}
+  .node{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink-soft);background:var(--panel);border:1px solid var(--line-strong);border-radius:20px;padding:7px 13px;text-decoration:none;transition:background .15s,border-color .15s,color .15s,transform .15s;white-space:nowrap}
+  .node:hover{color:#fff;border-color:var(--accent);background:var(--accent-soft);transform:translateY(-1px)}
+  .node .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+  .node.conv .dot{background:var(--teal)}
+  .node.conv:hover{border-color:var(--teal);background:var(--teal-soft)}
+  @media (max-width:660px){.nmlbl{min-width:100%}}
+  details.deal{border:1px solid var(--line-strong);background:var(--paper);border-radius:4px;overflow:hidden}
+  details.deal[open]{background:#101015}
+  .dsum{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 22px;transition:background .15s}
+  .dsum::-webkit-details-marker{display:none}
+  .dsum:hover{background:var(--panel)}
+  details.deal[open] .dsum{border-bottom:1px solid var(--line)}
+  .dleft{display:flex;align-items:center;gap:13px;min-width:0}
+  .dchev{width:7px;height:7px;border-right:1.5px solid var(--faint);border-bottom:1.5px solid var(--faint);transform:rotate(-45deg);transition:transform .2s;flex:none}
+  details.deal[open] .dchev{transform:rotate(45deg)}
+  .dleft .nm{font-weight:600;font-size:16px;color:#fff;letter-spacing:.02em;text-transform:uppercase}
+  .dleft .sub{font-size:11.5px;color:var(--muted);margin-top:2px}
+  .logo{width:36px;height:36px;border-radius:7px;background:rgba(255,255,255,.045);border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;flex:none;overflow:hidden}
+  .logo img{max-width:72%;max-height:72%;object-fit:contain;filter:brightness(0) invert(1);opacity:.94}
+  .logo .mono{display:none;font-family:var(--sans);font-weight:600;font-size:15px;color:#fff;letter-spacing:-.02em}
+  .logo.noimg img{display:none}
+  .logo.noimg .mono{display:flex}
+  .badges{display:flex;align-items:center;gap:8px;flex:none}
+  .tag{font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;font-weight:500;white-space:nowrap;border-radius:3px}
+  .tag.fund{background:var(--accent-soft);color:var(--accent)}
+  .tag.portco{background:var(--teal-soft);color:var(--teal)}
+  .ps{font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;font-weight:500;white-space:nowrap;border-radius:3px}
+  .ps.live{background:var(--up-soft);color:var(--up)}
+  .ps.scoping{background:var(--hold-soft);color:var(--hold)}
+  .ps.recovery{background:var(--hold-soft);color:var(--hold)}
+  .ps.closing{background:var(--up-soft);color:var(--up)}
+  .ps.exploring{background:var(--accent-soft);color:var(--accent)}
+
+  .dbody{padding:22px 22px 24px}
+  .stats{display:flex;flex-wrap:wrap;gap:18px 34px;padding-bottom:20px;margin-bottom:18px;border-bottom:1px solid var(--line)}
+  .stat .sv{font-size:16px;font-weight:600;color:#fff;line-height:1.1;letter-spacing:-.02em}
+  .stat .sk{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+
+  .field{display:grid;grid-template-columns:116px 1fr;gap:18px;padding:15px 0;border-bottom:1px solid var(--line)}
+  .dbody .field:last-of-type{border-bottom:none}
+  .fbody .ppl{display:flex;flex-direction:column;gap:8px}
+  .fbody .ppl .p{position:relative;padding-left:16px}
+  .fbody .ppl .p::before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .fbody .ppl .p b{color:var(--ink);font-weight:600}
+  .fbody .ppl .p span{color:var(--muted)}
+  .tagrow{display:flex;flex-wrap:wrap;gap:7px}
+  .uc{font-family:var(--mono);font-size:10px;letter-spacing:.02em;background:var(--panel);color:var(--ink-soft);padding:5px 9px;border:1px solid var(--line);border-radius:3px}
+
+  /* technical angles - card grid */
+  .angles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:5px;overflow:hidden;margin-top:2px;counter-reset:ang}
+  .angles .ang{display:flex;flex-direction:column;gap:9px;font-size:13px;color:var(--ink-soft);line-height:1.4;background:var(--paper);padding:15px 16px}
+  .angles .ang::before{counter-increment:ang;content:counter(ang,decimal-leading-zero);font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--accent);font-weight:500}
+  @media (max-width:660px){.angles{grid-template-columns:1fr 1fr}}
+  /* split into structured side-by-side pieces */
+  .split{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:5px;overflow:hidden}
+  .split .pc{background:var(--paper);padding:14px 15px;display:flex;flex-direction:column;gap:8px}
+  .split .pc .ph{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:500}
+  .split .pc .pt{font-size:13px;color:var(--ink-soft);line-height:1.45}
+  .split .pc .pt b{color:var(--ink);font-weight:600}
+  .splitnote{margin-top:11px;font-size:12.5px;color:var(--muted);line-height:1.55}
+  .splitnote b{color:var(--ink-soft);font-weight:600}
+  @media (max-width:660px){.split{grid-template-columns:1fr}}
+
+  /* business case */
+  .bcase{margin-top:18px;border:1px solid var(--line-strong);border-left:2px solid var(--accent);background:var(--panel);padding:17px 19px;border-radius:4px}
+  .bcase .bch{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:10px}
+  .bcase .bcv{font-size:13px;color:var(--ink-soft);line-height:1.6}
+  .bcase .bcv b{color:var(--ink);font-weight:600}
+  .est{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-top:11px;line-height:1.5}
+  .fbody.bc,.fbody.bar{border-left:2px solid var(--accent);padding-left:14px}
+
+  /* chronology */
+  details.chrono{margin-top:18px;border-top:1px solid var(--line);padding-top:4px}
+  details.chrono summary{list-style:none;cursor:pointer;padding:9px 0 4px;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:8px;user-select:none}
+  details.chrono summary::-webkit-details-marker{display:none}
+  details.chrono summary .chev{width:5px;height:5px;border-right:1.5px solid var(--faint);border-bottom:1.5px solid var(--faint);transform:rotate(-45deg);transition:transform .2s}
+  details.chrono[open] summary .chev{transform:rotate(45deg)}
+  details.chrono summary:hover{color:var(--ink)}
+  .log{padding:9px 0 2px}
+  .log-item{display:grid;grid-template-columns:66px 102px 1fr;gap:14px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--line)}
+  .log-item:last-child{border-bottom:none}
+  .log-item .dt{font-family:var(--mono);font-size:11.5px;color:var(--faint)}
+  .log-item .ty{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:500;text-align:center;padding:3px 0;background:var(--panel);color:var(--ink-soft);border:1px solid var(--line);border-radius:3px}
+  .log-item .tx{font-size:13px;color:var(--ink-soft);line-height:1.5}
+  .log-item .tx b{color:var(--ink);font-weight:600}
+
+  /* scannable portfolio table */
+  .ptbl-wrap{margin-top:8px;border:1px solid var(--line);background:var(--paper);border-radius:6px;overflow:hidden;overflow-x:auto}
+  table.ptbl{width:100%;border-collapse:collapse;font-size:12.5px;min-width:780px}
+  table.ptbl thead th{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;text-align:left;padding:13px 16px;background:var(--panel);border-bottom:1px solid var(--line-strong)}
+  table.ptbl td{padding:13px 16px;border-bottom:1px solid var(--line);color:var(--ink-soft);vertical-align:top;line-height:1.45}
+  table.ptbl tbody tr:last-child td{border-bottom:none}
+  table.ptbl tbody tr:hover td{background:var(--panel)}
+  table.ptbl td a.nmn{color:#fff;text-decoration:none;font-weight:600;letter-spacing:.01em}
+  table.ptbl td a.nmn:hover{color:var(--accent)}
+  table.ptbl .st{font-family:var(--mono);font-size:8.5px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:3px;white-space:nowrap;display:inline-block;font-weight:500}
+  .st.live{background:var(--up-soft);color:var(--up)}
+  .st.disc{background:var(--teal-soft);color:var(--teal)}
+  .st.scope{background:var(--hold-soft);color:var(--hold)}
+  table.ptbl tr.grp td{font-family:var(--mono);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);background:var(--paper);padding:10px 16px;font-weight:500}
+  table.ptbl tr.grp .cnt{color:var(--accent)}
+
+  footer{padding:34px 64px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:56px;justify-content:center;align-items:center;font-size:12.5px;color:var(--muted)}
+  footer .next{display:flex;flex-direction:column;gap:9px;align-items:center;text-align:center}
+  footer .next span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+  footer .next b{color:var(--ink-soft);font-weight:500}
+
+  .printbtn{position:fixed;right:24px;bottom:24px;z-index:50;font-family:var(--sans);font-size:13px;font-weight:500;background:#fff;color:#0a0a0b;border:none;cursor:pointer;padding:12px 19px;border-radius:8px;box-shadow:0 8px 24px -6px rgba(0,0,0,.6);transition:transform .15s}
+  .printbtn:hover{transform:translateY(-1px)}
+
+  @media (max-width:660px){
+    body{padding:20px 12px 80px}
+    .pad,header,.hero,footer{padding-left:26px;padding-right:26px}
+    .hero h1{font-size:29px}
+    .snap{grid-template-columns:repeat(2,1fr)}
+    .kp,.fwk .field,.field{grid-template-columns:1fr;gap:7px}
+    .log-item{grid-template-columns:60px 1fr;gap:8px}
+    .log-item .ty{grid-row:1;justify-self:start;padding:3px 7px}
+  }
+  @media print{
+    @page{margin:0}
+    html{scroll-behavior:auto}
+    body{background:var(--bg);padding:0;font-size:11.5px;background-image:none}
+    .sheet{border:none;box-shadow:none;border-radius:0;max-width:none}
+    .printbtn,.nodemap-sec{display:none}
+    .reveal{opacity:1!important;transform:none!important;animation:none!important}
+    section{padding:18px 0}
+    details:not([open])>*:not(summary){display:block!important}
+    .dchev,.chrono summary .chev{display:none}
+    .deal,.kp,.field,.metric,.log-item,.stats,.bcase{break-inside:avoid}
+    .eyebrow{break-after:avoid}
+    *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="reveal">
+    <div class="wordmark"><img class="logo-aug" src="data:image/png;base64,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" alt="Augusta Labs"></div>
+    <div class="mast-right">
+      <div class="cobrand"><span class="cb-for">Prepared for</span><img class="logo-hg" src="data:image/png;base64,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" alt="Hg"></div>
+      <span class="conf">Confidential</span>
+    </div>
+  </header>
+
+  <div class="hero reveal" style="animation-delay:.05s">
+    <div class="eye">Portfolio Engagement Update</div>
+    <h1>Augusta's AI transformation efforts across the Hg Portfolio</h1>
+    <p>Where our work together stands.</p>
+    <div class="metabar">
+      <div><span>Issued</span><b>18 June 2026</b></div>
+      <div><span>For</span><b>Hg ¬∑ Sebastian Klapdor &amp; Phil Wilding</b></div>
+    </div>
+  </div>
+
+  <div class="pad">
+
+    <!-- NODE MAP -->
+    <section class="reveal nodemap-sec" style="animation-delay:.04s">
+      <div class="eyebrow"><span class="lbl">Map ¬∑ jump to any engagement</span><span class="rule"></span></div>
+      <div class="nodemap">
+        <a class="node hub" href="#msa"><span class="dot"></span>Hg ¬∑ MSA Framework</a>
+        <div class="nmbranch">
+          <div class="nmrow">
+            <span class="nmlbl">Live projects ¬∑ 5</span>
+            <a class="node" href="#pc-baltic"><span class="dot"></span>Baltic Finance</a>
+            <a class="node" href="#pc-lbu"><span class="dot"></span>LBU</a>
+            <a class="node" href="#pc-diamant"><span class="dot"></span>Diamant</a>
+            <a class="node" href="#pc-scopevisio"><span class="dot"></span>Scopevisio</a>
+            <a class="node" href="#pc-zorn"><span class="dot"></span>Zorn ¬∑ Ascendia</a>
+          </div>
+          <div class="nmrow">
+            <span class="nmlbl conv">In conversation ¬∑ 4</span>
+            <a class="node conv" href="#pc-wecoya"><span class="dot"></span>Wecoya Mobility</a>
+            <a class="node conv" href="#pc-amdt"><span class="dot"></span>AMDT</a>
+            <a class="node conv" href="#pc-fondz"><span class="dot"></span>Fondz Finanz</a>
+            <a class="node conv" href="#pc-howden"><span class="dot"></span>Howden</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 00 HIGHLIGHTS -->
+    <section class="reveal" style="animation-delay:.08s">
+      <div class="eyebrow"><span class="lbl">Highlights ¬∑ for Sebastian &amp; Phil</span><span class="rule"></span></div>
+      <div class="hilites">
+        <div class="hl">
+          <div class="hn">01 ¬∑ The MSA</div>
+          <div class="ht">Framework at the finish line</div>
+          <div class="hb">Terms converged on 10 June ‚Äì 2 S-pods, ~<b>‚Ç¨800/day per FTE</b>, per-PortCo rate locks, 12-month competitor exclusivity ‚Äì and the MSA is now with Hg legal, signature imminent. It turns ad-hoc PortCo wins into a programmatic rollout across the Hg software portfolio.</div>
+        </div>
+        <div class="hl">
+          <div class="hn">02 ¬∑ Proof-point</div>
+          <div class="ht">Baltic Finance de-risks the rollup</div>
+          <div class="hb">Every Claims &amp; Underwriting workflow mapped and consolidated from <b>20+ to ~10</b>, each with auto / review / always-human logic and a compliance-owned rules layer. Phase-1 readout <b>22 June</b>; the reference that de-risks the wider GGW plan, with Permira already observing.</div>
+        </div>
+        <div class="hl">
+          <div class="hn">03 ¬∑ Recover + expand</div>
+          <div class="ht">Two recovered, one new live</div>
+          <div class="hb">Diamant and Scopevisio, flagged on 10 June, are stabilised ‚Äì weekly check-ins, a code-quality review against Hg's own guidelines, and an SDLC workshop with Stuart Pearce (<b>29 Jun-1 Jul</b>). In the same fortnight <b>Zorn</b> went live and <b>Wecoya Mobility</b> opened discussions off a first workshop; five engagements now active.</div>
+        </div>
+        <div class="hl">
+          <div class="hn">04 ¬∑ Pipeline + ask</div>
+          <div class="ht">Compounding before signature</div>
+          <div class="hb"><b>Wecoya Mobility</b> (first workshop just held), AMDT (intro call 18 June), Fondz Finanz and Howden are all in conversation, Hg-sourced. <b>Ask:</b> keep Phil and Sebastian as the escalation route into PortCo CTO/CEO conversations, and confirm Hg's presence for the 22 June Baltic readout and 30 June LBU workshop.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 HG OVERVIEW -->
+    <section class="reveal" id="msa" style="animation-delay:.1s">
+      <div class="eyebrow"><span class="idx">01</span><span class="lbl">MSA ¬∑ Overarching frame</span><span class="rule"></span></div>
+
+      <div class="snap">
+        <div class="metric"><div class="k">PortCos in the plan</div><div class="v">10‚Äì15</div><div class="cap">Programmatic rollout across the Hg software portfolio</div></div>
+        <div class="metric"><div class="k">Live projects</div><div class="v">5</div><div class="cap">Baltic Finance, Zorn, Diamant, Scopevisio, LBU</div></div>
+        <div class="metric"><div class="k">In conversation</div><div class="v">4</div><div class="cap">Wecoya Mobility, AMDT, Fondz Finanz, Howden</div></div>
+        <div class="metric"><div class="k">Next milestone</div><div class="v">22 Jun</div><div class="cap">Baltic Finance phase-1 readout</div></div>
+      </div>
+
+      <div class="chartwrap">
+        <div class="chead">
+          <span class="ct">Active PortCo project engagements / over time</span>
+          <span class="cc">By month, 2026 ‚Äì delivery engagements live in a given month</span>
+        </div>
+        <svg viewBox="0 0 900 292" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Active PortCo engagements rose from 1 in March to 5 in June 2026">
+          <defs>
+            <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="var(--accent)" stop-opacity="0.30"/>
+              <stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <!-- gridlines + y labels -->
+          <line x1="56" y1="240" x2="876" y2="240" stroke="var(--line-strong)"/>
+          <line x1="56" y1="179" x2="876" y2="179" stroke="var(--line)"/>
+          <line x1="56" y1="119" x2="876" y2="119" stroke="var(--line)"/>
+          <line x1="56" y1="58" x2="876" y2="58" stroke="var(--line)"/>
+          <text class="axislbl" x="46" y="244" text-anchor="end">0</text>
+          <text class="axislbl" x="46" y="183" text-anchor="end">2</text>
+          <text class="axislbl" x="46" y="123" text-anchor="end">4</text>
+          <text class="axislbl" x="46" y="62" text-anchor="end">6</text>
+          <!-- area + line -->
+          <polygon points="56,240 261,210 466,179 671,149 876,88 876,240 56,240" fill="url(#areaFill)"/>
+          <polyline points="56,240 261,210 466,179 671,149 876,88" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+          <!-- points -->
+          <circle cx="56"  cy="240" r="4" fill="var(--paper)" stroke="var(--accent)" stroke-width="2"/>
+          <circle cx="261" cy="210" r="4" fill="var(--paper)" stroke="var(--accent)" stroke-width="2"/>
+          <circle cx="466" cy="179" r="4" fill="var(--paper)" stroke="var(--accent)" stroke-width="2"/>
+          <circle cx="671" cy="149" r="4" fill="var(--paper)" stroke="var(--accent)" stroke-width="2"/>
+          <circle cx="876" cy="88"  r="5" fill="var(--accent)" stroke="var(--paper)" stroke-width="2"/>
+          <!-- value labels -->
+          <text class="vlbl" x="56"  y="228" text-anchor="start">0</text>
+          <text class="vlbl" x="261" y="198" text-anchor="middle">1</text>
+          <text class="vlbl" x="466" y="167" text-anchor="middle">2</text>
+          <text class="vlbl" x="671" y="137" text-anchor="middle">3</text>
+          <text class="vlbl" x="876" y="76"  text-anchor="end">5</text>
+          <!-- x labels -->
+          <text class="xlbl" x="56"  y="266" text-anchor="start">Feb</text>
+          <text class="xlbl" x="261" y="266" text-anchor="middle">Mar</text>
+          <text class="xlbl" x="466" y="266" text-anchor="middle">Apr</text>
+          <text class="xlbl" x="671" y="266" text-anchor="middle">May</text>
+          <text class="xlbl" x="876" y="266" text-anchor="end">Jun</text>
+        </svg>
+        <div class="cc" style="margin-top:6px">Mar: Diamant. Apr: +LBU. May: +Scopevisio. Jun: +Baltic Finance, +Zorn. Wecoya Mobility sits in discussions and AMDT in pipeline ‚Äî not yet counted as active.</div>
+      </div>
+
+
+      <div class="keypoints">
+        <div class="kp"><span class="kcat mom">Momentum</span><div class="kt">Framework terms converged verbally on the <b>10 June</b> sync ‚Äì 2 S-pods, ~<b>‚Ç¨800/day per FTE</b>, per-PortCo rate locks, 12-month direct-competitor exclusivity. MSA forwarded to Hg's legal team on 12 June; moves once GC Sophie returns.</div></div>
+        <div class="kp"><span class="kcat mom">Delivery</span><div class="kt">Baltic Finance is the standout ‚Äì end-to-end Claims &amp; Underwriting mapping delivered in Week 1, phase-1 readout on <b>22 June</b>. <b>Zorn</b> (Ascendia) went live this fortnight, kicking off an email-triage / next-best-action build after a 3-day Graz on-site. Diamant and Scopevisio were flagged for repair on 10 June and are now stabilised: weekly check-ins, a joint code-quality review against Hg's guidelines, and a Diamant SDLC workshop with Hg's Stuart Pearce (<b>29 Jun‚Äì1 Jul</b>).</div></div>
+        <div class="kp"><span class="kcat mom">Expansion</span><div class="kt">The relationship keeps opening doors: <b>Wecoya Mobility</b> ran a first build workshop in Lisbon (10‚Äì11 Jun) and is now scoping a delivery engagement; Sebastian formally introduced <b>AMDT</b> (German OT software, AI-native build) on 15 June with an intro call on <b>18 June</b>; <b>Fondz Finanz</b> (GGW) and <b>Howden</b> are queued as next opportunities ‚Äì fresh PortCos arriving before the framework is even signed. A shared <b>initiative tracker</b> across PortCos is being stood up, and the AI Transformation Playbook is now with Hg as the shared lens.</div></div>
+      </div>
+
+
+
+            <div class="msaframe">
+        <div class="msa">
+          <div class="msa-eyebrow">Master Services Agreement ¬∑ Fund-level frame</div>
+          <div class="msa-title">The commercial backbone for the 10-15 PortCo rollout</div>
+          <div class="msa-terms">
+            <span>2 S-pods to start</span><span>~‚Ç¨800/day per FTE</span><span>Per-PortCo rate locks + 3-mo cooldown</span><span>Rate-card cap 10% / 6-mo</span><span>12-mo competitor exclusivity</span>
+          </div>
+          <div class="msa-body">
+            <p class="msa-status">Basti and Phil came to the Augusta office in person on 10 June; Sebastian shared the partnership doc that evening, Augusta confirmed alignment on the proposed changes on 11 June, and Hg's legal team was looped in to set up the formal agreement. The MSA is now with legal (Sophie Christian coordinating) and signature is targeted imminently. A signed frame turns ad-hoc PortCo wins into a programmatic rollout across the Hg software portfolio ‚Äì the commercial backbone for the plan below.</p>
+            <div class="msa-meta">
+              <div><span>People</span><b>Sebastian Klapdor ‚Äì economic buyer ¬∑ Phil Wilding ‚Äì champion ¬∑ Sophie Christian ‚Äì legal</b></div>
+              <div><span>Unlocks</span><b>A programmatic AI-transformation rollout across the Hg software portfolio ‚Äì ad-hoc PortCo wins become a repeatable, governed motion</b></div>
+            </div>
+          </div>
+          <div class="msa-path"><span>Path</span>30 Apr capacity ring-fence ¬∑ 27 May revised proposal ¬∑ 10 Jun in-person ¬∑ 11 Jun aligned ¬∑ 15 Jun MSA with legal</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 ENGAGEMENTS -->
+    <section class="reveal" style="animation-delay:.2s">
+      <div class="eyebrow"><span class="idx">02</span><span class="lbl">Portfolio companies</span><span class="rule"></span></div>
+
+      <div class="ptbl-wrap">
+        <table class="ptbl">
+          <thead>
+            <tr>
+              <th style="width:17%">PortCo</th>
+              <th style="width:14%">Sector</th>
+              <th style="width:10%">Status</th>
+              <th style="width:13%">Hg sponsor</th>
+              <th style="width:13%">Augusta lead</th>
+              <th>Next step</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="grp"><td colspan="6">Live projects <span class="cnt">¬∑ 5</span></td></tr>
+            <tr>
+              <td><a class="nmn" href="#pc-baltic">GGW ¬∑ Baltic Finance</a></td>
+              <td>Insurance brokerage</td>
+              <td><span class="st live">Live</span></td>
+              <td>Fabian Reischl</td>
+              <td>Nuno Cassiano</td>
+              <td>Phase-1 final readout ¬∑ <b>22 Jun</b></td>
+            </tr>
+            <tr>
+              <td><a class="nmn" href="#pc-lbu">GGW ¬∑ LBU</a></td>
+              <td>Insurance brokerage</td>
+              <td><span class="st scope">Scoping</span></td>
+              <td>Fabian Heitfeld</td>
+              <td>Lennard Knorr</td>
+              <td>Full-day discovery workshop, Hamburg ¬∑ <b>30 Jun</b></td>
+            </tr>
+            <tr>
+              <td><a class="nmn" href="#pc-diamant">Diamant</a></td>
+              <td>Accounting software</td>
+              <td><span class="st live">Live</span></td>
+              <td>Sebastian Klapdor</td>
+              <td>Tiago Pereira</td>
+              <td>SDLC workshop w/ Hg's Stuart Pearce ¬∑ <b>29 Jun‚Äì1 Jul</b></td>
+            </tr>
+            <tr>
+              <td><a class="nmn" href="#pc-scopevisio">Scopevisio</a></td>
+              <td>Cloud ERP software</td>
+              <td><span class="st live">Live</span></td>
+              <td>Sebastian Klapdor</td>
+              <td>Jo√£o Raposo</td>
+              <td>Land "chat with your business" prototype ¬∑ <b>this week</b></td>
+            </tr>
+            <tr>
+              <td><a class="nmn" href="#pc-zorn">Zorn ¬∑ Ascendia</a></td>
+              <td>Insurance brokerage</td>
+              <td><span class="st live">Live</span></td>
+              <td>Phil Wilding</td>
+              <td>Andr√© Alves</td>
+              <td>Weekly SteerCo ¬∑ fuller eval-score update end of week</td>
+            </tr>
+            <tr class="grp"><td colspan="6">In conversation <span class="cnt">¬∑ 4</span></td></tr>
+            <tr>
+              <td><a class="nmn" href="#pc-wecoya">Wecoya Mobility</a></td>
+              <td>Mobility insurance</td>
+              <td><span class="st disc">Discussion</span></td>
+              <td>Fabian Reischl</td>
+              <td>Jo√£o Grilo</td>
+              <td>Agree scope of a delivery engagement off first workshop</td>
+            </tr>
+            <tr>
+              <td><a class="nmn" href="#pc-amdt">AMDT</a></td>
+              <td>Industrial OT software</td>
+              <td><span class="st disc">Discussion</span></td>
+              <td>Sebastian Klapdor</td>
+              <td>TBD</td>
+              <td>Intro call ¬∑ <b>18 Jun</b></td>
+            </tr>
+            <tr>
+              <td><a class="nmn" href="#pc-fondz">Fondz Finanz</a></td>
+              <td>Financial broker pool</td>
+              <td><span class="st disc">Discussion</span></td>
+              <td>Sebastian Klapdor</td>
+              <td>TBD</td>
+              <td>CPTO session to port the GGW mapping method</td>
+            </tr>
+            <tr>
+              <td><a class="nmn" href="#pc-howden">Howden</a></td>
+              <td>Insurance broking</td>
+              <td><span class="st disc">Discussion</span></td>
+              <td>Phil Wilding</td>
+              <td>TBD</td>
+              <td>First scoping conversation off Hg intros</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subhead"><span>Live projects</span><span class="cnt">5</span><span class="shrule"></span></div>
+      <div class="deals">
+
+        
+
+        <!-- BALTIC FINANCE -->
+        <details class="deal" id="pc-baltic">
+          <summary class="dsum">
+            <div class="dleft"><span class="dchev"></span>
+              <div><div class="nm">GGW ¬∑ Baltic Finance</div><div class="sub">Flagship Claims &amp; Underwriting transformation across the Hg‚ÄìGGW insurance brokerage group</div></div>
+            </div>
+            <div class="badges"><span class="tag portco">PortCo</span></div>
+          </summary>
+          <div class="dbody">
+            <div class="stats">
+              <div class="stat"><div class="sv">Insurance brokerage</div><div class="sk">Sector</div></div>
+              <div class="stat"><div class="sv">Jun 2026</div><div class="sk">Engaged</div></div>
+              <div class="stat"><div class="sv">Delivery</div><div class="sk">Stage</div></div>
+              <div class="stat"><div class="sv">Fabian Reischl</div><div class="sk">Hg sponsor</div></div>
+              <div class="stat"><div class="sv">Nuno Cassiano</div><div class="sk">Augusta lead</div></div>
+            </div>
+            <div class="field"><div class="flabel">Status</div><div class="fbody bar">The standout live engagement and <b>proof-point for the GGW umbrella</b>. Week 1 mapped the entire Claims &amp; Underwriting operation end to end ‚Äì every workflow with its triggers and decisions ‚Äì delivered as an interactive, password-protected workflow viewer. Hg (Fabian Reischl) called the depth strong and asked to surface volume KPIs; those are now captured. Week 2 presented 15 June; <b>phase-1 final readout on 22 June</b>.</div></div>
+            <div class="field"><div class="flabel">People</div><div class="fbody"><div class="ppl">
+              <div class="p">Peter Bangsgaard, Maria Lee-Berndt <span>‚Äì Wecoya / Baltic Finance</span></div>
+              <div class="p">Antonia Meister, Edyta Schaefer, Nick Lambertz, Nicolas Simson, Philip Gossmann <span>‚Äì GGW Group</span></div>
+              <div class="p">Fabian Heitfeld, Fabian Reischl, Sebastian Klapdor <span>‚Äì Hg</span></div>
+              <div class="p">Gabriel Adebiyi <span>‚Äì Permira (cross-fund observer on the readouts)</span></div>
+              <div class="p">Nuno Cassiano, Andr√© Alves <span>‚Äì Augusta (delivery lead / AI transformation lead)</span></div>
+            </div></div></div>
+            <div class="field"><div class="flabel">Technical angles</div><div class="fbody"><div class="angles">
+              <div class="ang">Workflow mapping & consolidation (20+ ‚Üí ~10)</div><div class="ang">Per-step autonomy (auto / review / human)</div><div class="ang">Claims & Underwriting info barrier</div><div class="ang">Compliance rules + full audit layer</div>
+            </div></div></div>
+            <div class="field"><div class="flabel">Method</div><div class="fbody"><div class="split"><div class="pc"><div class="ph">1 ¬∑ Discover &amp; Map</div><div class="pt">Every Claims &amp; Underwriting workflow profiled by trigger, inputs, decisions and handoffs ‚Äî with Data and Compliance in the room.</div></div><div class="pc"><div class="ph">2 ¬∑ Best-in-Class Design</div><div class="pt">Mapped model pressure-tested through market benchmarks, compliance gates on what must stay human, a Claims-to-Underwriting cross-check, a UI walkthrough and an adversarial tech review.</div></div><div class="pc"><div class="ph">3 ¬∑ Final Plan</div><div class="pt">Bottom-up business case per initiative in real volume / time / euro, ranked by impact with a build roadmap.</div></div></div><div class="splitnote"><b>Target architecture:</b> Claims and Underwriting as separate harnesses behind an information barrier, a compliance-owned rules layer, full observability and audit, and a GGW/Wecoya reporting layer.</div></div></div>
+            <div class="field"><div class="flabel">Business case</div><div class="fbody bc">A <b>validated flagship</b> that templatises across the GGW broker rollup ‚Äì a single owned AI/context platform replacing a patchwork of local tools, with the W1 workflow inventory and volume KPIs quantifying where automation lands. The proof point that <b>de-risks the wider portfolio plan</b>; a cross-fund audience (Permira) is already watching.<div class="est">Anchor of the GGW umbrella ¬∑ est. ~30% underwriting handling-time reduction (to validate) ¬∑ a blueprint the rest of the GGW brokers can reuse</div></div></div>
+            <details class="chrono"><summary><span class="chev"></span>Interaction chronology</summary><div class="log">
+              <div class="log-item"><span class="dt">01 Jun</span><span class="ty">Kickoff</span><span class="tx">AI-transformation exploration kicks off at Baltic Finance</span></div>
+              <div class="log-item"><span class="dt">05 Jun</span><span class="ty">W1</span><span class="tx">Week-1 readout: end-to-end Claims &amp; Underwriting mapping + workflow viewer</span></div>
+              <div class="log-item"><span class="dt">09 Jun</span><span class="ty">Feedback</span><span class="tx">Hg (Reischl) happy with depth; asks to surface volume KPIs ‚Äì now captured</span></div>
+              <div class="log-item"><span class="dt">15 Jun</span><span class="ty">W2</span><span class="tx">Week-2 presentation shared with GGW / Hg / Wecoya / Permira stakeholders</span></div>
+              <div class="log-item"><span class="dt">22 Jun</span><span class="ty">W3</span><span class="tx">Phase-1 final readout (scheduled)</span></div>
+            </div></details>
+          </div>
+        </details>
+
+        <!-- LBU -->
+        <details class="deal" id="pc-lbu">
+          <summary class="dsum">
+            <div class="dleft"><span class="dchev"></span>
+              <div><div class="nm">GGW ¬∑ LBU</div><div class="sub">End-to-end property-claims automation pilot across GGW's Leading Brokers United network</div></div>
+            </div>
+            <div class="badges"><span class="tag portco">PortCo</span></div>
+          </summary>
+          <div class="dbody">
+            <div class="stats">
+              <div class="stat"><div class="sv">Insurance brokerage</div><div class="sk">Sector</div></div>
+              <div class="stat"><div class="sv">Apr 2026</div><div class="sk">Engaged</div></div>
+              <div class="stat"><div class="sv">Scoping</div><div class="sk">Stage</div></div>
+              <div class="stat"><div class="sv">Fabian Heitfeld</div><div class="sk">Hg sponsor</div></div>
+              <div class="stat"><div class="sv">Lennard Knorr</div><div class="sk">Augusta lead</div></div>
+            </div>
+            <div class="field"><div class="flabel">Status</div><div class="fbody bar">Scoping the next engagement inside the GGW rollup. After the first call with Daniel Besendorfer (28 Apr) and an Hg-brokered intro to the GGW GmbH team in Hamburg, the first pilot department was confirmed as <b>"Schaden Sach" / property claims</b> (2 June). Augusta drafted the discovery questionnaire off the existing AlixPartners diagnostic and the Wecoya template; Fabian Reischl returned observations (9 June). Full-day workshop on <b>30 June</b> to finalise scope before a priced proposal.</div></div>
+            <div class="field"><div class="flabel">People</div><div class="fbody"><div class="ppl">
+              <div class="p">Daniel Besendorfer <span>‚Äì LBU</span></div>
+              <div class="p">Constantin von Rauchhaupt, Nuno Matos <span>‚Äì GGW (Hamburg)</span></div>
+              <div class="p">Nick Lambertz, Nicolas Simson, Philip Gossmann <span>‚Äì GGW Group</span></div>
+              <div class="p">Fabian Heitfeld, Fabian Reischl <span>‚Äì Hg (portfolio delivery)</span></div>
+              <div class="p">Lennard Knorr <span>‚Äì Augusta (workshop lead)</span></div>
+            </div></div></div>
+            <div class="field"><div class="flabel">Technical angles</div><div class="fbody"><div class="angles">
+              <div class="ang">Property-claims (Schaden Sach) pilot</div><div class="ang">Agentic claims triage + per-step autonomy</div><div class="ang">Process mapping & discovery (GBTEC / AlixPartners)</div><div class="ang">Reuses Wecoya template</div>
+            </div></div></div>
+            <div class="field"><div class="flabel">Pricing &amp; workshop</div><div class="fbody"><div class="split"><div class="pc"><div class="ph">Pricing</div><div class="pt">Baltic pod model ‚Äî <b>‚Ç¨10k/week</b> for a 1‚Äì2 person pod on one use case, or <b>‚Ç¨20k/week</b> for a 2‚Äì4 person pod running two in parallel.</div></div><div class="pc"><div class="ph">Workshop</div><div class="pt"><b>30 June ¬∑ Hamburg (Chilehaus)</b> ‚Äî full-day discovery; questionnaire answers due 25 June.</div></div><div class="pc"><div class="ph">Format</div><div class="pt">Bilingual ‚Äî Lennard leads German process work with the claims handlers; Vasco runs English senior-stakeholder sessions, with live speech-to-text for German-only stretches.</div></div></div></div></div>
+            <div class="field"><div class="flabel">Business case</div><div class="fbody bc">Automate the "Schaden Sach" property-claims workflow as the <b>second use case across the GGW portfolio</b>. A successful pilot templatises across LBU's claims operation and the wider rollup.<div class="est">Est. ‚Ç¨150K pilot ¬∑ claims-handling efficiency (Augusta has shown ~40% claims-processing reduction elsewhere ‚Äì to be validated in pilot)</div></div></div>
+            <details class="chrono"><summary><span class="chev"></span>Interaction chronology</summary><div class="log">
+              <div class="log-item"><span class="dt">28 Apr</span><span class="ty">Call</span><span class="tx">First call with Daniel Besendorfer (LBU); strong alignment</span></div>
+              <div class="log-item"><span class="dt">18 May</span><span class="ty">Intro</span><span class="tx">Hg brokers direct intro to the GGW GmbH team in Hamburg</span></div>
+              <div class="log-item"><span class="dt">02 Jun</span><span class="ty">Scope</span><span class="tx">Fabian Heitfeld confirms "Schaden Sach" / property claims as first pilot dept</span></div>
+              <div class="log-item"><span class="dt">06 Jun</span><span class="ty">Email</span><span class="tx">Discovery questionnaire drafted off AlixPartners material + Wecoya template</span></div>
+              <div class="log-item"><span class="dt">09 Jun</span><span class="ty">Feedback</span><span class="tx">Fabian Reischl returns observations on the questionnaire</span></div>
+              <div class="log-item"><span class="dt">30 Jun</span><span class="ty">Workshop</span><span class="tx">Full-day hands-on workshop to finalise pilot scope (scheduled)</span></div>
+            </div></details>
+          </div>
+        </details>
+
+        <!-- DIAMANT -->
+        <details class="deal" id="pc-diamant">
+          <summary class="dsum">
+            <div class="dleft"><span class="dchev"></span>
+              <div><div class="nm">Diamant</div><div class="sub">Autonomous Invoice-to-Pay platform for a leading German accounting-software provider</div></div>
+            </div>
+            <div class="badges"><span class="tag portco">PortCo</span></div>
+          </summary>
+          <div class="dbody">
+            <div class="stats">
+              <div class="stat"><div class="sv">Accounting software</div><div class="sk">Sector</div></div>
+              <div class="stat"><div class="sv">Mar 2026</div><div class="sk">Engaged</div></div>
+              <div class="stat"><div class="sv">Delivery</div><div class="sk">Stage</div></div>
+              <div class="stat"><div class="sv">Sebastian Klapdor</div><div class="sk">Hg sponsor</div></div>
+              <div class="stat"><div class="sv">Tiago Pereira</div><div class="sk">Augusta lead</div></div>
+            </div>
+            <div class="field"><div class="flabel">Status</div><div class="fbody bar">Two workstreams run through a formal ITP/BI Steering Committee: the <b>ITP</b> (Invoice-to-Pay) agent and a <b>BI</b> track now centred on the data-warehouse choice. After delivery feedback on 10 June (cultural clash with a conservative legacy org), a joint code-quality review against Hg's internal guidelines (Iunia Burlan) plus a coaching push <b>restored confidence</b>; one engineer was temporarily rolled off for capacity (15 June). Hg's Stuart Pearce runs a 3-day SDLC transformation workshop <b>29 Jun‚Äì1 Jul</b>.</div></div>
+            <div class="field"><div class="flabel">People</div><div class="fbody"><div class="ppl">
+              <div class="p">Frank K√∂nig <span>‚Äì Diamant, head of dev ¬∑ Rainer CTO ¬∑ Dirk Goldner</span></div>
+              <div class="p">Christina Sch√§rtl <span>‚Äì Diamant, steerco coordination</span></div>
+              <div class="p">Sebastian Klapdor <span>‚Äì Hg, originated the referral</span> ¬∑ Iunia Burlan <span>(code quality)</span> ¬∑ Jian Lim <span>(BI)</span></div>
+              <div class="p">Stuart Pearce <span>‚Äì Hg, SDLC workshop lead</span> ¬∑ Audrey Reyes <span>(steerco)</span></div>
+              <div class="p">Tiago Pereira <span>‚Äì Augusta, embedded engagement lead</span></div>
+            </div></div></div>
+            <div class="field"><div class="flabel">Technical angles</div><div class="fbody"><div class="angles">
+              <div class="ang">Invoice-to-Pay agent (M2‚ÄìM5)</div><div class="ang">BI / data-warehouse selection</div><div class="ang">Code quality vs Hg guidelines</div><div class="ang">SDLC transformation + legacy enablement</div>
+            </div></div></div>
+            <div class="field"><div class="flabel">Business case</div><div class="fbody bc"><b>Autonomous agent</b> automating Diamant's Invoice-to-Pay process plus a modern BI/data-warehouse foundation ‚Äì freeing finance-ops capacity and proving an AI-native pattern on legacy German finance software. The SDLC workshop turns the delivery friction into a repeatable engineering-transformation play; a proposed <b>AI-native product-revamp initiative</b> (to be floated with Frank K√∂nig) would show the art of the possible and feed architecture into the roadmap while the new CTO onboards. The pattern is reusable across other Hg Catalyst software companies.<div class="est">Est. ‚Ç¨120K engagement ¬∑ ITP + BI workstreams ¬∑ + AI-native product-revamp initiative ¬∑ a blueprint for the Hg Catalyst series</div></div></div>
+            <details class="chrono"><summary><span class="chev"></span>Interaction chronology</summary><div class="log">
+              <div class="log-item"><span class="dt">06 Mar</span><span class="ty">Call</span><span class="tx">Architecture &amp; scoping call ‚Äì agent platform for Invoice-to-Pay</span></div>
+              <div class="log-item"><span class="dt">20 Apr</span><span class="ty">Workshop</span><span class="tx">BI-roadmap workshop</span></div>
+              <div class="log-item"><span class="dt">26‚Äì31 May</span><span class="ty">Reset</span><span class="tx">Rodrigo ‚Üî Frank K√∂nig collaboration reset on ways of working</span></div>
+              <div class="log-item"><span class="dt">01 Jun</span><span class="ty">Steerco</span><span class="tx">ITP/BI Steering Committee begins; Augusta joins the cadence</span></div>
+              <div class="log-item"><span class="dt">10 Jun</span><span class="ty">Review</span><span class="tx">Delivery feedback with Sebastian; coaching plan + weekly check-in agreed</span></div>
+              <div class="log-item"><span class="dt">12 Jun</span><span class="ty">Steerco</span><span class="tx">ITP milestones M2‚ÄìM5 reviewed; BI data-warehouse selection in focus (Jian Lim)</span></div>
+              <div class="log-item"><span class="dt">15 Jun</span><span class="ty">Weekly</span><span class="tx">Confidence restored; one engineer temporarily rolled off for capacity</span></div>
+              <div class="log-item"><span class="dt">17 Jun</span><span class="ty">Review</span><span class="tx">Joint code-quality review vs Hg guidelines (Iunia Burlan, 4 dimensions)</span></div>
+              <div class="log-item"><span class="dt">29 Jun‚Äì1 Jul</span><span class="ty">Workshop</span><span class="tx">SDLC transformation workshop led by Hg's Stuart Pearce (scheduled)</span></div>
+            </div></details>
+          </div>
+        </details>
+
+        <!-- SCOPEVISIO -->
+        <details class="deal" id="pc-scopevisio">
+          <summary class="dsum">
+            <div class="dleft"><span class="dchev"></span>
+              <div><div class="nm">Scopevisio</div><div class="sub">AI-native delivery and engineering enablement for a German cloud-ERP leader</div></div>
+            </div>
+            <div class="badges"><span class="tag portco">PortCo</span></div>
+          </summary>
+          <div class="dbody">
+            <div class="stats">
+              <div class="stat"><div class="sv">Cloud ERP software</div><div class="sk">Sector</div></div>
+              <div class="stat"><div class="sv">May 2026</div><div class="sk">Engaged</div></div>
+              <div class="stat"><div class="sv">Delivery</div><div class="sk">Stage</div></div>
+              <div class="stat"><div class="sv">Sebastian Klapdor</div><div class="sk">Hg sponsor</div></div>
+              <div class="stat"><div class="sv">Jo√£o Raposo</div><div class="sk">Augusta lead</div></div>
+            </div>
+            <div class="field"><div class="flabel">Status</div><div class="fbody bar">Phase 1 delivery, run with daily PoD stand-ups and a weekly Friday governance call with CTO Lukas Pustina. <b>This week is the crucial one</b>: the goal is to land the <b>"chat with your business" prototype</b> finished, and the team feels very confident going in. Tech lead Jonathan Koch flagged a Phase-1 confidence concern on 9 June; Lukas reaffirmed his "strong belief in the partnership" and eagerness to extend to a <b>second team</b>. A same-day alignment call plus the governance cadence restored on-time confidence; Sebastian is visiting Bonn.</div></div>
+            <div class="field"><div class="flabel">People</div><div class="fbody"><div class="ppl">
+              <div class="p">Lukas Pustina <span>‚Äì Scopevisio, CTO (sponsor; wants a 2nd team)</span></div>
+              <div class="p">Jonathan Koch <span>‚Äì Scopevisio, tech lead</span> ¬∑ Jennifer Trembaczowski <span>(coordination)</span></div>
+              <div class="p">Martin Foerster, Silvan Arz, Patrick Peschlow <span>‚Äì Scopevisio (SteerCo / product)</span></div>
+              <div class="p">Sebastian Klapdor <span>‚Äì Hg (visiting Bonn)</span></div>
+              <div class="p">Vasco, M√°rio, Jo√£o Raposo, Jo√£o Moita <span>‚Äì Augusta (PoD)</span></div>
+            </div></div></div>
+            <div class="field"><div class="flabel">Technical angles</div><div class="fbody"><div class="angles">
+              <div class="ang">Unified knowledge brain + MCP</div><div class="ang">Prototypes from problem statements</div><div class="ang">AI ticket generation</div><div class="ang">Enablement + AI-legible repos</div>
+            </div></div></div>
+            <div class="field"><div class="flabel">Business case</div><div class="fbody bc">A <b>recovered engagement</b> built on a "teach, don't just ship" enablement model that leaves Scopevisio's own engineers AI-fluent ‚Äì the CTO has already floated expanding to a <b>second team</b>.<div class="est">Recovered and on track ¬∑ expansion to a 2nd team floated</div></div></div>
+            <details class="chrono"><summary><span class="chev"></span>Interaction chronology</summary><div class="log">
+              <div class="log-item"><span class="dt">~late May</span><span class="ty">Kickoff</span><span class="tx">Engagement + first hackathon; daily PoD stand-ups begin</span></div>
+              <div class="log-item"><span class="dt">09 Jun</span><span class="ty">Flag</span><span class="tx">Jonathan Koch: "losing confidence Phase 1 will deliver on what we agreed"</span></div>
+              <div class="log-item"><span class="dt">10 Jun</span><span class="ty">Recover</span><span class="tx">Lukas reaffirms partnership + 2nd-team appetite; alignment call; Klapdor review</span></div>
+              <div class="log-item"><span class="dt">13‚Äì15 Jun</span><span class="ty">Cadence</span><span class="tx">Weekly Friday governance call with Lukas set; on-time confidence restored</span></div>
+              <div class="log-item"><span class="dt">18 Jun</span><span class="ty">SteerCo</span><span class="tx">Formal weekly Augusta SteerCo set up (Foerster, Arz, Peschlow, Koch added)</span></div>
+            </div></details>
+          </div>
+        </details>
+
+        <!-- ZORN -->
+        <details class="deal" id="pc-zorn">
+          <summary class="dsum">
+            <div class="dleft"><span class="dchev"></span>
+              <div><div class="nm">Zorn ¬∑ Ascendia</div><div class="sub">Eval-driven email-triage and next-best-action agent for Ascendia's brokerage network</div></div>
+            </div>
+            <div class="badges"><span class="tag portco">PortCo</span></div>
+          </summary>
+          <div class="dbody">
+            <div class="stats">
+              <div class="stat"><div class="sv">Insurance brokerage</div><div class="sk">Sector</div></div>
+              <div class="stat"><div class="sv">Jun 2026</div><div class="sk">Engaged</div></div>
+              <div class="stat"><div class="sv">Delivery</div><div class="sk">Stage</div></div>
+              <div class="stat"><div class="sv">Phil Wilding</div><div class="sk">Hg sponsor</div></div>
+              <div class="stat"><div class="sv">Andr√© Alves</div><div class="sk">Augusta lead</div></div>
+            </div>
+            <div class="field"><div class="flabel">Status</div><div class="fbody bar">Live build led by Andr√© Topa Alves. After a 3-day on-site in Graz (hosted by Raphael Zorn), Phase 1 is intentionally narrow: correctly classify the email entry point and define the next best action. First scores on a <b>47-fixture golden dataset</b> ‚Äì gpt-5-nano 40.9 (~3¬¢/run) and <b>gpt-5-mini 69.3</b> (~15¬¢/run), closing on Claes's target. Document ingestion (OCR) is the weak spot, with a VLM layer as the way forward; CRM integration (SOPs and terminology captured) follows once scores hold. A weekly SteerCo now runs (started Mon 15 June).</div></div>
+            <div class="field"><div class="flabel">People</div><div class="fbody"><div class="ppl">
+              <div class="p">Raphael Zorn <span>‚Äì Zorn (on-site host)</span></div>
+              <div class="p">Florian Brokamp <span>‚Äì Ascendia Gruppe, CEO</span> ¬∑ Claes Christiansen <span>(target-setter)</span></div>
+              <div class="p">Phil Wilding, Christopher Scholz, Sebastian Zureich <span>‚Äì Hg</span></div>
+              <div class="p">Andr√© Topa Alves <span>‚Äì Augusta (lead)</span> ¬∑ Bernardo, Ricardo Querido, Jo√£o Grilo</div>
+            </div></div></div>
+            <div class="field"><div class="flabel">Technical angles</div><div class="fbody"><div class="angles">
+              <div class="ang">Email classification + next-best-action</div><div class="ang">Golden-dataset evals (47 fixtures)</div><div class="ang">Model / cost trade-off (nano vs mini)</div><div class="ang">VLM/OCR ingestion ‚Üí CRM write-back</div>
+            </div></div></div>
+            <div class="field"><div class="flabel">Business case</div><div class="fbody bc">An <b>accurate, low-cost email-triage agent</b> that routes each inbound to its next best action and then writes back into the CRM ‚Äì a measurable ops-efficiency play with a clean eval harness from day one. A fast, demonstrable win inside another Hg/Ascendia asset, with the golden-dataset method portable to adjacent workflows.<div class="est">Phase 1: classify + next-best-action ¬∑ eval-gated ¬∑ CRM write-back to follow</div></div></div>
+            <details class="chrono"><summary><span class="chev"></span>Interaction chronology</summary><div class="log">
+              <div class="log-item"><span class="dt">~07‚Äì09 Jun</span><span class="ty">On-site</span><span class="tx">3-day Graz visit: email classification + action space, SOPs/terminology captured</span></div>
+              <div class="log-item"><span class="dt">10 Jun</span><span class="ty">Evals</span><span class="tx">First golden-dataset scores shared (nano 40.9 / mini 69.3); OCR flagged as weak spot</span></div>
+              <div class="log-item"><span class="dt">15 Jun</span><span class="ty">SteerCo</span><span class="tx">Weekly SteerCo #2 (2‚Äì3pm CET); fuller score update to follow end of week</span></div>
+            </div></details>
+          </div>
+        </details>
+      </div>
+
+      <div class="subhead conv"><span>In conversation deals</span><span class="cnt">4</span><span class="shrule"></span></div>
+      <div class="deals">
+
+        <!-- WECOYA MOBILITY -->
+        <details class="deal" id="pc-wecoya">
+          <summary class="dsum">
+            <div class="dleft"><span class="dchev"></span>
+              <div><div class="nm">Wecoya Mobility</div><div class="sub">Underwriting automation for GGW's mobility MGA ‚Äî in discussion after a first workshop</div></div>
+            </div>
+            <div class="badges"><span class="tag portco">PortCo</span></div>
+          </summary>
+          <div class="dbody">
+            <div class="stats">
+              <div class="stat"><div class="sv">Mobility insurance</div><div class="sk">Sector</div></div>
+              <div class="stat"><div class="sv">Jun 2026</div><div class="sk">Engaged</div></div>
+              <div class="stat"><div class="sv">Discussions</div><div class="sk">Stage</div></div>
+              <div class="stat"><div class="sv">Fabian Reischl</div><div class="sk">Hg sponsor</div></div>
+              <div class="stat"><div class="sv">Jo√£o Grilo</div><div class="sk">Augusta lead</div></div>
+            </div>
+            <div class="field"><div class="flabel">Status</div><div class="fbody bar">In discussion under the GGW / Wecoya umbrella, and distinct from Baltic Finance. Wecoya brought a working first version of an underwriting flow with the ambition to take it <b>production-ready</b> and automate the process end to end. A <b>first build workshop</b> ran in Lisbon (10‚Äì11 June): kickoff and target-version alignment, an end-of-day demo to the group (Sebastian in the room, the Fabians dialling in) and a North Star agreed. Next step is to <b>agree the scope and shape of a delivery engagement</b> off that workshop.</div></div>
+            <div class="field"><div class="flabel">People</div><div class="fbody"><div class="ppl">
+              <div class="p">Tobias Stopp, Maximilian Berghoff <span>‚Äì Wecoya Mobility Underwriting</span></div>
+              <div class="p">Lennart Wulff <span>‚Äì Wecoya Underwriting</span></div>
+              <div class="p">Sebastian Klapdor, Fabian Reischl, Fabian Heitfeld, Sophie Christian <span>‚Äì Hg</span></div>
+              <div class="p">Jo√£o Grilo, Jo√£o Martins, Martim Lousado <span>‚Äì Augusta (build team)</span></div>
+            </div></div></div>
+            <div class="field"><div class="flabel">Explored technical angles</div><div class="fbody"><div class="angles">
+              <div class="ang">End-to-end underwriting automation</div><div class="ang">Evals-first development</div><div class="ang">Deploy into client Kubernetes</div><div class="ang">Langdock models + Langfuse tracing</div>
+            </div></div></div>
+            <div class="field"><div class="flabel">Business case</div><div class="fbody bc">A path to a <b>production-ready, GDPR-compliant underwriting agent</b> owned and run inside Wecoya's own infrastructure ‚Äì a second AI-native build for the GGW group that complements the Baltic Finance mapping work. Shared eval/observability tooling is being stood up at GGW level (via Philip Gossmann), making the pattern portable across the umbrella.<div class="est">In discussion ¬∑ first workshop held 10‚Äì11 Jun ¬∑ delivery scope to be agreed</div></div></div>
+            <details class="chrono"><summary><span class="chev"></span>Interaction chronology</summary><div class="log">
+              <div class="log-item"><span class="dt">~late May</span><span class="ty">Materials</span><span class="tx">Wecoya shares insurer-feedback analysis, Q&amp;A answers and the v1 code</span></div>
+              <div class="log-item"><span class="dt">05 Jun</span><span class="ty">Infra</span><span class="tx">Joint infra session; deployment (K8s, Langdock, Langfuse, KeyCloak) aligned</span></div>
+              <div class="log-item"><span class="dt">10‚Äì11 Jun</span><span class="ty">Workshop</span><span class="tx">First 2-day Lisbon build workshop; end-of-day demo to Hg; North Star agreed</span></div>
+            </div></details>
+          </div>
+        </details>
+
+        <!-- AMDT -->
+        <details class="deal" id="pc-amdt">
+          <summary class="dsum">
+            <div class="dleft"><span class="dchev"></span>
+              <div><div class="nm">AMDT</div><div class="sub">AI-native transformation for the global leader in industrial OT-security software</div></div>
+            </div>
+            <div class="badges"><span class="tag portco">PortCo</span></div>
+          </summary>
+          <div class="dbody">
+            <div class="stats">
+              <div class="stat"><div class="sv">Industrial OT software</div><div class="sk">Sector</div></div>
+              <div class="stat"><div class="sv">Jun 2026</div><div class="sk">Engaged</div></div>
+              <div class="stat"><div class="sv">Intro</div><div class="sk">Stage</div></div>
+              <div class="stat"><div class="sv">Sebastian Klapdor</div><div class="sk">Hg sponsor</div></div>
+              <div class="stat"><div class="sv">TBD</div><div class="sk">Augusta lead</div></div>
+            </div>
+            <div class="field"><div class="flabel">Status</div><div class="fbody bar">Sebastian made the <b>formal intro on 15 June</b> ‚Äì Augusta to engage on AMDT's AI-native transformation and explore how to support the initiative. Scheduling converged quickly; intro call set for <b>Thursday 18 June, 10:30 UK</b>, coordinated by Sophie Christian.</div></div>
+            <div class="field"><div class="flabel">People</div><div class="fbody"><div class="ppl">
+              <div class="p">Julie Wende <span>‚Äì AMDT</span></div>
+              <div class="p">Sebastian Klapdor <span>‚Äì Hg (originator)</span> ¬∑ Sophie Christian <span>(coordination)</span> ¬∑ Martin Daberkow <span>‚Äì Hg</span></div>
+              <div class="p">Rodrigo Fernandes <span>‚Äì Augusta</span></div>
+            </div></div></div>
+            <div class="field"><div class="flabel">Explored technical angles</div><div class="fbody"><div class="angles">
+              <div class="ang">AI-native transformation</div><div class="ang">Industrial OT software</div><div class="ang">First use case TBD post-intro</div>
+            </div></div></div>
+            <div class="field"><div class="flabel">Business case</div><div class="fbody bc">Another portfolio engagement <b>sourced directly by Hg</b> before the framework is signed ‚Äì an early read on AMDT's AI-native ambitions and where to land a first use case.<div class="est">Exploring ¬∑ intro call 18 June ¬∑ scope to be defined</div></div></div>
+          </div>
+        </details>
+
+        <!-- FONDZ FINANZ -->
+        <details class="deal" id="pc-fondz">
+          <summary class="dsum">
+            <div class="dleft"><span class="dchev"></span>
+              <div><div class="nm">Fondz Finanz</div><div class="sub">Scaling the proven GGW transformation blueprint into Germany's largest broker pool</div></div>
+            </div>
+            <div class="badges"><span class="tag portco">PortCo</span></div>
+          </summary>
+          <div class="dbody">
+            <div class="stats">
+              <div class="stat"><div class="sv">Financial broker pool</div><div class="sk">Sector</div></div>
+              <div class="stat"><div class="sv">Jun 2026</div><div class="sk">Engaged</div></div>
+              <div class="stat"><div class="sv">Intro</div><div class="sk">Stage</div></div>
+              <div class="stat"><div class="sv">Sebastian Klapdor</div><div class="sk">Hg sponsor</div></div>
+              <div class="stat"><div class="sv">TBD</div><div class="sk">Augusta lead</div></div>
+            </div>
+            <div class="field"><div class="flabel">Status</div><div class="fbody bar">Surfaced on the 15 June Hg weekly. Plan: a session with the CPTO to review the workflow-mapping and operational-transformation work underway at GGW (Baltic Finance) and assess how it ports across. Fondz Finanz is also the <b>first target for systematic value measurement and case-study generation</b> across the portfolio.</div></div>
+            <div class="field"><div class="flabel">Explored technical angles</div><div class="fbody"><div class="angles">
+              <div class="ang">Reuse the GGW mapping method</div><div class="ang">Operating-model redesign</div><div class="ang">Value measurement + case study</div>
+            </div></div></div>
+            <div class="field"><div class="flabel">Business case</div><div class="fbody bc">A second GGW-umbrella entity <b>taking the Baltic Finance method off the shelf</b> ‚Äì faster to value because the mapping approach, autonomy logic and reporting layer already exist. Doubles as the proving ground for how Augusta measures and packages value across the portfolio.<div class="est">Reuses existing GGW method ¬∑ first value-measurement / case-study target</div></div></div>
+          </div>
+        </details>
+
+        <!-- HOWDEN -->
+        <details class="deal" id="pc-howden">
+          <summary class="dsum">
+            <div class="dleft"><span class="dchev"></span>
+              <div><div class="nm">Howden</div><div class="sub">Workflow-automation entry point into a top-10 global insurance broker</div></div>
+            </div>
+            <div class="badges"><span class="tag portco">PortCo</span></div>
+          </summary>
+          <div class="dbody">
+            <div class="stats">
+              <div class="stat"><div class="sv">Insurance broking</div><div class="sk">Sector</div></div>
+              <div class="stat"><div class="sv">Jun 2026</div><div class="sk">Engaged</div></div>
+              <div class="stat"><div class="sv">Intro</div><div class="sk">Stage</div></div>
+              <div class="stat"><div class="sv">Phil Wilding</div><div class="sk">Hg sponsor</div></div>
+              <div class="stat"><div class="sv">TBD</div><div class="sk">Augusta lead</div></div>
+            </div>
+            <div class="field"><div class="flabel">Status</div><div class="fbody bar">Flagged from Phil and Sebastian's discussions this week; Augusta to follow up on the resulting introductions. <b>Earliest-stage of the three</b> ‚Äì no scope defined yet.</div></div>
+            <div class="field"><div class="flabel">Explored technical angles</div><div class="fbody"><div class="angles">
+              <div class="ang">Broking / claims operations</div><div class="ang">Workflow mapping entry point</div><div class="ang">First use case TBD</div>
+            </div></div></div>
+            <div class="field"><div class="flabel">Business case</div><div class="fbody bc">An early-stage introduction in insurance broking; the immediate goal is a <b>first scoping conversation to find a first use case</b>, mirroring how Baltic Finance and LBU started.<div class="est">Intro stage ¬∑ scope to be defined</div></div></div>
+          </div>
+        </details>
+      </div>
+
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="next"><span>Prepared by</span><b><img class="logo-aug-ft" src="data:image/png;base64,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" alt="Augusta Labs"></b></div>
+    <div class="next"><span>Prepared for</span><b><img class="logo-hg-ft" src="data:image/png;base64,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" alt="Hg"></b></div>
+  </footer>
+
+</div>
+
+<button class="printbtn" onclick="window.print()">Save as PDF</button>
+
+<script>
+  window.addEventListener('beforeprint', function(){
+    document.querySelectorAll('details').forEach(function(d){ d.dataset._o = d.open?'1':'0'; d.open=true; });
+  });
+  window.addEventListener('afterprint', function(){
+    document.querySelectorAll('details').forEach(function(d){ d.open = d.dataset._o==='1'; });
+  });
+</script>
+</body>
+</html>
